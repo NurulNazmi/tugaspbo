@@ -15,6 +15,25 @@ class koneksi {
 }
 
     }
+    function tampil_Data_Banyak($query){
+        $data = mysqli_query($this->koneksi,$query);
+        while ($row = mysqli_fetch_assoc($data))
+            $hasil[] =$row;
+        return $hasil;
+    }
+
+    public function Insert($query)
+    {
+        $insert = "INSERT INTO $query";
+
+        return mysqli_query($this->koneksi,$query);
+    }
+
+    function tampil_Data_Satu($query){
+        $get = mysqli_query($this->koneksi,$query);
+        $data = mysqli_fetch_assoc($get);
+        return $data;
+    }
 }
 $db = new koneksi
 ?>
