@@ -1,0 +1,35 @@
+h1 {
+    text-align: center;
+}
+
+body{
+
+    background: #678386;
+
+    color: #000000;
+}
+.centering {
+    margin: 10px auto;
+
+}
+
+.table {
+    font-family: sans-serif;
+    border-collapse: collapse;
+}
+
+.table1, th, td {
+    border: 1px solid #000000;
+    padding: 8px 20px
+}
+
+.container {
+    width: 350px;
+    display:grid;
+    flex-direction:column;
+    gap:20px;
+    border:2px solid black;
+    padding: 20px;
+    margin:50px auto; 
+}
+
