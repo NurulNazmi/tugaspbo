@@ -5,4 +5,6 @@ nama kelompok :
  3..Azma Dwipa 12110007
  4.Nurul Nazmi hidayat 12110028
  5.Ikvina Rizqo 12110039
- Jadi kelompok kami membuat aplikasi WOI ZAKAT menggunakan Visualstudiocode dan php
+
+Jadi kelompok kami membuat aplikasi ZAKAT YOK menggunakan Visualstudiocode dan php
+ 

@@ -6,15 +6,18 @@ $queryHarga = "SELECT * FROM `harga_beras`"
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WOI ZAKAT</title>
+    <title>ZAKAT YOK</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <form method="post">
+    <nav class="navbar">
+    <h1>PEMBAYARAN ZAKAT</h1>
+</nav>
+    <form method="post" class="centering container">
         <label for="nama">Nama</label>
         <input name="nama" type="text"></input><br>
 
@@ -49,10 +52,15 @@ $queryHarga = "SELECT * FROM `harga_beras`"
 
           $queryInsert ="INSERT INTO `pembayar_zakat`(`nama`, `tanggungan`, `harga_beras`, `total_bayar`, `nama_amil`) VALUES ('$nama','$tanggungan','$hb','$tb','$NA')";
           $db->Insert($queryInsert);
+
+    ?>
+          <meta http-equiv="refresh" content="0; url= indeks.php">
+    <?php
     }
+
     ?>
     
-    <table border=1>
+    <table border=1 class="centering">
         <thead>
             <th>nama</th>
             <th>tanggungan</th>
@@ -60,6 +68,7 @@ $queryHarga = "SELECT * FROM `harga_beras`"
             <th>total_bayar</th>
             <th>nama_amil</th>
         </thead>
+
         <?php
         $query = "SELECT *, harga_beras.harga_beras FROM pembayar_zakat INNER JOIN harga_beras ON pembayar_zakat.harga_beras=harga_beras.id";
         foreach ($db->tampil_Data_Banyak($query) as $value) {
